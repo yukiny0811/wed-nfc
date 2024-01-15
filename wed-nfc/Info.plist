@@ -21,7 +21,5 @@
 			</array>
 		</dict>
 	</dict>
-	<key>NFCReaderUsageDescription</key>
-	<string>nfc</string>
 </dict>
 </plist>
