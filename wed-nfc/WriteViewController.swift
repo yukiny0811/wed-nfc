@@ -17,11 +17,6 @@ class WriteViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
-         
-    
-        
-        Int(inputTextField.text ?? "") ?? 0
-        
     }
     
     @IBAction func didTapWrite() {
