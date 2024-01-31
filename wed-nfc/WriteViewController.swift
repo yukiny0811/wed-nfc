@@ -17,10 +17,16 @@ class WriteViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
+         
+    
+        
+        Int(inputTextField.text ?? "") ?? 0
+        
     }
     
     @IBAction func didTapWrite() {
         NFCManager.shared.write(text: inputTextField.text!)
+        
         
         //複雑なデータを扱いたい場合
         //        CodableNFCManager.shared.write(tagData: TagData(text: inputTextField.text!, number: 0))
