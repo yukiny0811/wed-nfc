@@ -36,6 +36,7 @@ class WriteViewController: UIViewController {
                     
                     if count > nfccount {
                         print ("count is bigger")
+                        NFCManager.shared.write(text: "0")
                     }
                 }
             }
