@@ -13,6 +13,13 @@ class StepManager {
     static func getStepCount(startDate: Date, endDate: Date) async throws -> Int {
         
         let healthKitStore = HKHealthStore()
+        
+        let readTypes = Set([
+            HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount )!
+        ])
+        
+        try await healthKitStore.requestAuthorization(toShare: [], read: readTypes)
+        
         let quantityType = HKSampleType.quantityType(forIdentifier: .stepCount)!
         let periodPredicate = HKQuery.predicateForSamples(
             withStart: startDate,

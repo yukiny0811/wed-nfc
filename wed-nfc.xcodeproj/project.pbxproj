@@ -311,10 +311,12 @@
 				CODE_SIGN_ENTITLEMENTS = "wed-nfc/wed-nfc.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3X7LEN654Y;
+				DEVELOPMENT_TEAM = XH2JMYC7KB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "wed-nfc/Info.plist";
 				INFOPLIST_KEY_NFCReaderUsageDescription = nfc;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "using stepcount";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "share health data";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -326,7 +328,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kyoya.wed-nfc";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yukiny.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -342,10 +344,12 @@
 				CODE_SIGN_ENTITLEMENTS = "wed-nfc/wed-nfc.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3X7LEN654Y;
+				DEVELOPMENT_TEAM = XH2JMYC7KB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "wed-nfc/Info.plist";
 				INFOPLIST_KEY_NFCReaderUsageDescription = nfc;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "using stepcount";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "share health data";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -357,7 +361,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kyoya.wed-nfc";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yukiny.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
