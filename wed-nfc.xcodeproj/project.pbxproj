@@ -16,6 +16,7 @@
 		3D5E72E82B551B080074170F /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5E72E72B551B080074170F /* WriteViewController.swift */; };
 		3D5E72EA2B551B0D0074170F /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5E72E92B551B0D0074170F /* ReadViewController.swift */; };
 		3DAD007D2B551949000B8E4E /* CodableNFCManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAD007C2B551949000B8E4E /* CodableNFCManager.swift */; };
+		A6997F662B6A4C20000648C0 /* StepManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6997F652B6A4C20000648C0 /* StepManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		3D5E72E92B551B0D0074170F /* ReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewController.swift; sourceTree = "<group>"; };
 		3D5E72EB2B551CE70074170F /* wed-nfc.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "wed-nfc.entitlements"; sourceTree = "<group>"; };
 		3DAD007C2B551949000B8E4E /* CodableNFCManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableNFCManager.swift; sourceTree = "<group>"; };
+		A6997F652B6A4C20000648C0 /* StepManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				3D5E72EB2B551CE70074170F /* wed-nfc.entitlements */,
 				3D14405A2B53D03C00EDFA9B /* AppDelegate.swift */,
 				3D14405C2B53D03C00EDFA9B /* SceneDelegate.swift */,
+				A6997F652B6A4C20000648C0 /* StepManager.swift */,
 				3D5E72E72B551B080074170F /* WriteViewController.swift */,
 				3D5E72E92B551B0D0074170F /* ReadViewController.swift */,
 				3D14406E2B53D0B600EDFA9B /* NFCManager.swift */,
@@ -153,6 +156,7 @@
 				3D14405B2B53D03C00EDFA9B /* AppDelegate.swift in Sources */,
 				3D14406F2B53D0B700EDFA9B /* NFCManager.swift in Sources */,
 				3D5E72E82B551B080074170F /* WriteViewController.swift in Sources */,
+				A6997F662B6A4C20000648C0 /* StepManager.swift in Sources */,
 				3D5E72EA2B551B0D0074170F /* ReadViewController.swift in Sources */,
 				3D14405D2B53D03C00EDFA9B /* SceneDelegate.swift in Sources */,
 			);

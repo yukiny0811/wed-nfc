@@ -13,6 +13,11 @@ class WriteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Task {
+            let date = Date()
+            let oneDayBefore = Calendar.current.date(byAdding: .day, value: -1, to: date)!
+            let count = try! await StepManager.getStepCount(startDate: oneDayBefore, endDate: date)
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
