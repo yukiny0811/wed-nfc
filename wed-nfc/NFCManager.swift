@@ -76,13 +76,14 @@ extension NFCManager: NFCNDEFReaderSessionDelegate {
     private func read(tag: NFCNDEFTag, session: NFCNDEFReaderSession) {
         tag.readNDEF { [unowned self] message, _ in
             session.alertMessage = "読み込み完了"
-            session.invalidate()
+//            session.invalidate()
             DispatchQueue.main.async {
                 guard let payload = message?.records.first?.payload, let text = String(data: payload, encoding: .utf8) else {
                     self.readHandler(nil)
                     return
                 }
                 self.readHandler(text)
+                session.restartPolling()
             }
         }
     }

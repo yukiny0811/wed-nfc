@@ -25,9 +25,24 @@ class WriteViewController: UIViewController {
     }
     
     @IBAction func didTapWrite() {
-        NFCManager.shared.write(text: inputTextField.text!)
+//        NFCManager.shared.write(text: inputTextField.text!)
+        NFCManager.shared.read { text in
+            if let text = text {
+                let nfccount = Int(text) ?? 0
+                Task {
+                    let date = Date()
+                    let oneDayBefore = Calendar.current.date(byAdding: .day, value: -1, to: date)!
+                    let count = try! await StepManager.getStepCount(startDate: oneDayBefore, endDate: date)
+                    
+                    if count > nfccount {
+                        print ("count is bigger")
+                        NFCManager.shared.write(text: "0")
+                    }
+                }
+            }
+        }
         
-        
+
         //複雑なデータを扱いたい場合
         //        CodableNFCManager.shared.write(tagData: TagData(text: inputTextField.text!, number: 0))
     }
