@@ -16,6 +16,7 @@
 		3D5E72E82B551B080074170F /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5E72E72B551B080074170F /* WriteViewController.swift */; };
 		3D5E72EA2B551B0D0074170F /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5E72E92B551B0D0074170F /* ReadViewController.swift */; };
 		3DAD007D2B551949000B8E4E /* CodableNFCManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAD007C2B551949000B8E4E /* CodableNFCManager.swift */; };
+		56B8A9E82B737BA4006EDD20 /* Drops in Frameworks */ = {isa = PBXBuildFile; productRef = 56B8A9E72B737BA4006EDD20 /* Drops */; };
 		8D1171012B6A5D7A00AD2018 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1171002B6A5D7A00AD2018 /* HomeViewController.swift */; };
 		A6997F662B6A4C20000648C0 /* StepManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6997F652B6A4C20000648C0 /* StepManager.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56B8A9E82B737BA4006EDD20 /* Drops in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +102,9 @@
 			dependencies = (
 			);
 			name = "wed-nfc";
+			packageProductDependencies = (
+				56B8A9E72B737BA4006EDD20 /* Drops */,
+			);
 			productName = "wed-nfc";
 			productReference = 3D1440572B53D03C00EDFA9B /* wed-nfc.app */;
 			productType = "com.apple.product-type.application";
@@ -128,6 +133,9 @@
 				Base,
 			);
 			mainGroup = 3D14404E2B53D03C00EDFA9B;
+			packageReferences = (
+				56B8A9E62B737BA4006EDD20 /* XCRemoteSwiftPackageReference "Drops" */,
+			);
 			productRefGroup = 3D1440582B53D03C00EDFA9B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -240,7 +248,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -297,7 +305,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -318,6 +326,7 @@
 				DEVELOPMENT_TEAM = XH2JMYC7KB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "wed-nfc/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "あるいてにたまご";
 				INFOPLIST_KEY_NFCReaderUsageDescription = nfc;
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "using stepcount";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "share health data";
@@ -332,7 +341,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yukiny.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yukiny.test.wednfc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -351,6 +360,7 @@
 				DEVELOPMENT_TEAM = XH2JMYC7KB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "wed-nfc/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "あるいてにたまご";
 				INFOPLIST_KEY_NFCReaderUsageDescription = nfc;
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "using stepcount";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "share health data";
@@ -365,7 +375,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yukiny.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yukiny.test.wednfc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -395,6 +405,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		56B8A9E62B737BA4006EDD20 /* XCRemoteSwiftPackageReference "Drops" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/omaralbeik/Drops";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		56B8A9E72B737BA4006EDD20 /* Drops */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 56B8A9E62B737BA4006EDD20 /* XCRemoteSwiftPackageReference "Drops" */;
+			productName = Drops;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3D14404F2B53D03C00EDFA9B /* Project object */;
 }
