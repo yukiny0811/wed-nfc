@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import Drops
 
 class WriteViewController: UIViewController {
     
-    @IBOutlet var inputTextField: UITextField!
+    @IBOutlet var label: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,24 +27,34 @@ class WriteViewController: UIViewController {
     
     @IBAction func didTapWrite() {
 //        NFCManager.shared.write(text: inputTextField.text!)
-        NFCManager.shared.read { text in
-            if let text = text {
-                let nfccount = Int(text) ?? 0
-                Task {
-                    let date = Date()
-                    let oneDayBefore = Calendar.current.date(byAdding: .day, value: -1, to: date)!
-                    let count = try! await StepManager.getStepCount(startDate: oneDayBefore, endDate: date)
-                    
-                    if count > nfccount {
-                        print ("count is bigger")
-                        NFCManager.shared.write(text: "0")
-                    }
+        Task {
+            let nfcText: String? = await withCheckedContinuation { continuation in
+                NFCManager.shared.read { text in
+                    continuation.resume(returning: text)
                 }
             }
+            guard let nfcText, let nfcCount = Int(nfcText) else {
+                label.text = "記録なし"
+                NFCManager.shared.write(text: "error")
+                return
+            }
+            label.text = nfcText + "kcal"
+            NFCManager.shared.write(text: nfcText)
+            try? await Task.sleep(for: .seconds(4))
+            
+            // get step count
+            let date = Date()
+            let oneDayBefore = Calendar.current.date(byAdding: .day, value: -1, to: date)!
+            let stepCount = try! await StepManager.getStepCount(startDate: oneDayBefore, endDate: date)
+            
+            guard stepCount > nfcCount else {
+                Drops.show("歩数が足りないです！")
+                return
+            }
+            Drops.show("たくさん歩きましたね！")
+            NFCManager.shared.write(text: "煮玉子もらえる")
+            label.text = "煮玉子！"
+            
         }
-        
-
-        //複雑なデータを扱いたい場合
-        //        CodableNFCManager.shared.write(tagData: TagData(text: inputTextField.text!, number: 0))
     }
 }
